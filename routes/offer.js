@@ -31,7 +31,7 @@ router.post(
             "Vous devez saisir une description inférieure à 500 caractères.",
         });
       }
-      if (typeof price !== "number") {
+      if (!Number(price)) {
         return res
           .status(400)
           .json({ message: "Vous devez saisir un prix au format numérique." });
